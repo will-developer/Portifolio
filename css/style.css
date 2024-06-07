@@ -1,0 +1,191 @@
+/*  ========== Fontes das Letras ========= */
+/*  ========== CSS Global ========= */
+:root
+{
+  --principal: #00a78e;
+  --sombra-preta: 0 5px 15px rgba(0, 0, 0, 0.2);
+  --preto: #000;
+  --preto-cinza: #646f87;
+  --cinza-claro: #f7f7f7;
+  --branco: #fff;
+  --preto-alfa: rgba(0,0,0,.5);
+  /* peso da fonte */
+  --weight-700-title: /*a definir*/;
+  --weight-600: /*a definir*/;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  background-color: (var(--branco));
+}
+
+ul{
+  list-style: none;
+}
+
+img{
+  vertical-align: middle;
+}
+
+.container{
+  max-width: 1140px;
+  margin: auto ;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.align-items-center{
+  align-items: center;
+}
+
+.justify-content-between{
+  justify-content: space-between;
+}
+
+.btn-1{
+  background-color: var(--principal);
+  padding: 15px 40px;
+  border: none;
+  color: var(--branco);
+  border-radius: 5px;
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 600;
+  transition: all .3s ease-in-out;
+}
+/* a definir o btn*/
+.btn-1:hover{
+  color: ar(--branco);
+  background-color: rgba(0, 167, 142,0.7);
+}
+
+/* ========== Navegação ========= */
+.navbar {
+ position: fixed;
+ z-index: 999;
+ width: 100%;
+ padding: 25px;
+ transition: all .5s ease-out;
+}
+
+.logo a{
+  font-size: 24px;
+  color: var(--preto);
+  text-transform: capitalize;
+}
+
+.logo a span{
+  color: var(--principal)
+}
+
+.nav-item{
+  display: inline-block;
+  position: relative;
+  margin-left: 36px;
+}
+
+.nav-link{
+  color: var(--branco);
+  font-size: 16px;
+  padding: 10px 0;
+  display: block;
+  text-transform: capitalize;
+  transition: color 0.3s;
+}
+
+.nav-link:hover,
+.navbar.sticky .nav-link:hover{
+  color: var(--preto);
+}
+
+
+/* ========== Home ========= */
+.home-section{
+  position: relative;
+  background-color: var(--sombra-preta);
+  z-index: 1;
+  overflow-x: hidden;
+  padding-top: 80px;
+}
+
+.home-text, 
+.home-image{
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0 25px;
+}
+
+.home-text h4{
+  font-size: 30px;
+  letter-spacing: 4px;
+  font-weight: var(--weight-600);
+  color: var(--principal);
+}
+
+.home-text h1{
+  font-size: 50px;
+  margin-top: 15px;
+  font-weight: var(--weight-700-title);
+  color: var(--preto);
+}
+
+.home-text span{
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: var(--weight-700-title);
+  color: var(--preto);
+  display: block;
+  margin-top: 15px;
+}
+
+.home-text p {
+  font-size: 16px;
+  color: var(--preto-cinza);
+  font-weight: 24px;
+  margin-top: 15px;
+}
+
+.home-text .btn{
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.home-image .img-box img{
+  position: relative;
+  width: 100%;
+  z-index: 700;
+  margin-top: 51px;
+}
+
+.hero-shape {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45%;
+  height: 100%;
+}
+
+.hero-shape::before {
+  position: absolute;
+  content: '';
+  width: 1000%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--principal);
+  transform: skew(20deg);
+}
+
+
+
