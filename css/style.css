@@ -70,6 +70,31 @@ img{
   background-color: rgba(0, 167, 142,0.7);
 }
 
+.section-padding {
+  padding: 80px 0;
+}
+
+.text-align {
+  text-align: center;
+}
+
+.section-title{
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-bottom: 30px;
+}
+
+.sub-title{
+  font-size: 20px;
+  font-weight: var(--weight-600) /* A definir */;
+  color: var(--principal);
+}
+
+.main-title {
+  font-size: 35px;
+  font-weight: var(--weight-600);
+}
+
 /* ========== Navegação ========= */
 .navbar {
  position: fixed;
@@ -77,6 +102,12 @@ img{
  width: 100%;
  padding: 25px;
  transition: all .5s ease-out;
+}
+
+.sticky {
+  padding: 12px 25px;
+  background-color: var(--branco);
+  box-shadow: var(--sombra-preta);
 }
 
 .logo a{
@@ -109,6 +140,9 @@ img{
   color: var(--preto);
 }
 
+.navbar.sticky .nav-link{
+  color: var(--principal)
+}
 
 /* ========== Home ========= */
 .home-section{
@@ -187,5 +221,154 @@ img{
   transform: skew(20deg);
 }
 
+/* ========== Sobre ========= */
+.about-image,
+.about-content {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 20px;
+}
+.img-box{
+  position: relative;
+}
+
+.img-box img {
+  max-width: 100%;
+  width: 100%;
+  z-index: 100;
+}
+
+.img-box .about-shape {
+  width: 404px;
+  height: 525px;
+  border-left: 15px solid var(--principal);
+  border-bottom: 15px solid var(--principal);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.img-box .about-shape::before{
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 85.4%;
+  background-color: var(--principal);
+  bottom: 0;
+  right: 0;
+}
+
+.img-box .about-shape::after{
+  position: absolute;
+  content: '';
+  width: 104%;
+  height: 15px;
+  background-color: var(--principal);
+  top: 36px;
+  right: 0;
+  transform: rotate(11deg);
+  border-top-left-radius: 20px;
+}
+
+.about-content p{
+ text-align: justify;
+}
+
+.hardskill-item{
+  flex: 0 0 30%;
+  max-width: 30%;
+  margin-top: 30px;
+  margin-bottom: -30px;
+  text-align: center;
+  padding: 20px;
+}
+
+.hardskill-item img {
+  width: 90px;
+  height: 90px;
+}
+
+.hardskill-item h3 {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* ========== habilidades ========= */
+.skill-section {
+  min-height: 100vh;
+  background-color: var(--cinza-claro);
+}
+
+.skill-item{
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-item-inner{
+  box-shadow: var(--sombra-preta);
+  padding: 50px 15px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.skill-item-inner:hover{
+background-color: var(--principal);
+}
+
+.icon {
+  height: 60px;
+  width: 60px;
+  background-color: var(--principal);
+  margin: 0 auto 30px;
+  text-align: center;
+  font-size: 28px;
+  color: var(--branco);
+  border-radius: 20px;
+  border-bottom-right-radius: 0;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.skill-item-inner:hover .icon {
+background-color: var(--branco);
+color: var(--principal);
+font-size: 24px;
+}
+
+.icon i {
+  line-height: 60px;
+}
+
+.skill-item-inner h3{
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--preto);
+  margin: 0 0 10px;
+  text-transform: capitalize;
+  transition: all 0.3s ease;
+}
+
+.skill-item-inner:hover h3 {
+  color: var(--branco);
+}
+
+.skill-item-inner p {
+  font-size: 16px;
+  color: var(--preto-cinza);
+  margin: 0;
+  line-height: 26px;
+  transition: all 0.3s ease;
+}
+
+.skill-item-inner:hover p {
+  color: var(--cinza-claro);
+}
 
 
