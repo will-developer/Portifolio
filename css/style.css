@@ -321,7 +321,7 @@ img{
 background-color: var(--principal);
 }
 
-.icon {
+.skill-item-inner .icon {
   height: 60px;
   width: 60px;
   background-color: var(--principal);
@@ -371,4 +371,130 @@ font-size: 24px;
   color: var(--cinza-claro);
 }
 
+/* Aba de Projetos */
+.portfolio-filter {
+  flex: 0 0 100%;
+  max-width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+.portfolio-filter button {
+  font-size: 15px;
+  margin-top: -20px;
+  outline: none;
+  border: 1px solid;
+  border-color: var(--principal);
+  padding: 8px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: var(--branco);
+  margin-right: 20px;
+  color: var(--principal);
+  transition: all 0.3s ease;
+}
+
+.portfolio-filter button:hover,
+.portfolio-filter button.active {
+  background-color: var(--principal);
+  color: white;
+}
+
+.portfolio-item{
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-item.hide{
+  display: none;
+}
+
+.portfolio-item.show{
+  display: block;
+  animation: showItem 0.5 ease;
+}
+
+@keyframes showItem{
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.portfolio-item-inner {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: (var(--sombra-preta));
+  cursor: pointer;
+  position: relative;
+}
+
+.portfolio-img img {
+  width: 100%;
+  display: block;
+}
+
+.portfolio-item .portfolio-info {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.portfolio-item:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio-info h4{
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--principal);
+  text-transform: uppercase;
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.portfolio-info:hover h4 {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.portfolio-info .icon{
+  height: 40px;
+  width: 40px;
+  color: var(--branco);
+  background-color: var(--principal);
+  text-align: center;
+  border-radius: 50%;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  transform: translateX(20px);
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+.portfolio-info:hover .icon {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.portfolio-info .icon .fa{
+  line-height: 40px;
+}
 
