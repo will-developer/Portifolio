@@ -7,6 +7,23 @@ window.onscroll = () => {
     : navbar.classList.remove('sticky');
 };
 
+// nav-toggle
+const navMenu = document.querySelector('.menu');
+const navToggle = document.querySelector('.menu-btn');
+if (navToggle) {
+  navToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+}
+//fechar menu quando o link é clicado
+const navLink = document.querySelectorAll('.nav-link');
+function linkAction() {
+  const navMenu = document.querySelector('.menu');
+  navMenu.classList.remove('active');
+}
+
+navLink.forEach((n) => n.addEventListener('click', linkAction));
+
 // filtro do portifolio
 const FilterContainer = document.querySelector('.portfolio-filter');
 const filterBtns = FilterContainer.children;

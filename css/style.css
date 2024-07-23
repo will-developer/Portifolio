@@ -152,6 +152,24 @@ img{
   color: var(--principal)
 }
 
+.menu-btn{
+  background-color: var(--principal);
+  height: 34px;
+  width: 44px;
+  box-shadow: var(--sombra-preta);
+  border-radius: 5px;
+  line-height: 38px;
+  text-align: center;
+  color: var(--branco);
+  font-size: 17px;
+  display: none;
+}
+
+.navbar.sticky .menu-btn{
+  color: var(--principal);
+  background-color: var(--branco);
+}
+
 /* ========== Home ========= */
 .home-section{
   position: relative;
@@ -399,6 +417,7 @@ font-size: 24px;
   background-color: var(--branco);
   margin-right: 20px;
   color: var(--principal);
+  margin-bottom: 20px;
   transition: all 0.3s ease;
 }
 
@@ -406,6 +425,10 @@ font-size: 24px;
 .portfolio-filter button.active {
   background-color: var(--principal);
   color: white;
+}
+
+.portfolio-filter button:last-child {
+  margin: 0;
 }
 
 .portfolio-item{
@@ -606,4 +629,100 @@ font-size: 24px;
   color: var(--preto);
   font-weight: 300;
   margin: 8px 0 0;
+}
+
+@media (max-width: 991px) {
+  .menu {
+    position: fixed;
+    left: -100%;
+    top: 80px;
+    flex-direction: column;
+    background-color: var(--principal);
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 10px 27px rgba(0,0,0,.05);
+    transition: all 0.5s ease
+  }
+
+  .menu.active{
+    left: 0;
+  }
+
+  .navbar.sticky .menu{
+    background-color: var(--branco);
+    top: 65px;
+  }
+
+  .nav-item{
+    display: block;
+    margin: 6px 0;
+  }
+
+  .navbar.sticky .nav-link{
+    color: var(--principal);
+  }
+
+  .menu-btn{
+    display: block;
+    z-index: 999;
+  }
+
+  .hero-shape {
+    display: none;
+  }
+
+  .home-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .home-text,
+  .home-image{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .home-image{
+    display: flex;
+    justify-content: center;
+  }
+
+  .img-box{
+  margin-top: 30px; 
+  }
+
+  .about-image {
+    display: none;
+  }
+
+  .about-content {
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+
+  .section-title {
+    text-align: center;
+  }
+
+  .portfolio-item,
+  .skill-item {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .skill-item,
+  .portfolio-item,
+  .contact-item,
+  .w-50,
+  .about-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .hardskill-item{
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
