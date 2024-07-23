@@ -8,7 +8,7 @@
   --preto-cinza: #646f87;
   --cinza-claro: #f7f7f7;
   --branco: #fff;
-  --preto-alfa: rgba(0,0,0,.5);
+  --preto-alfa: 0 4px 8px rgba(0, 0, 0, 0.5);
   /* peso da fonte */
   --weight-700-title: /*a definir*/;
   --weight-600: /*a definir*/;
@@ -19,6 +19,10 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body{
@@ -47,6 +51,10 @@ img{
 
 .align-items-center{
   align-items: center;
+}
+
+.justify-content-center{
+  justify-content: center;
 }
 
 .justify-content-between{
@@ -498,3 +506,104 @@ font-size: 24px;
   line-height: 40px;
 }
 
+/* ====== Contato ======*/
+.contact-section {
+  min-height: 100vh;
+  background-color: var(--cinza-claro);
+}
+
+.contact-item{
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.contact-item-inner {
+  padding: 30px 15px;
+  text-align: center;
+  box-shadow: var(--sombra-preta);
+  border-radius: 5px;
+  width: 100%;
+}
+
+.contact-item-inner i{
+  font-size: 25px;
+  color: var(--principal);
+}
+
+.contact-item-inner span{
+  display: block;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--preto);
+  margin: 15px 0 10px;
+  text-transform: capitalize;
+}
+
+.contact-item-inner p {
+  font-size: 16px;
+  color: var(--preto-cinza);
+  line-height: 26px;
+  margin: 0;
+}
+
+.contact-form{
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-top: 50px;
+}
+
+.w-50{
+  padding: 0 15px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.input-group {
+  margin: 0 0 25px;
+  border-radius: 30px;
+  background-color: var(--cinza-claro);
+  box-shadow: var(--sombra-preta);
+}
+
+.input-control {
+  height: 45px;
+  display: block;
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 0 15px;
+  color: var(--preto-cinza);
+  transition: all 0.3 ease;
+}
+
+.input-group textarea.input-control{
+  height: 180px;
+  padding-top: 15px;
+  resize: none;
+}
+
+.submit-btn {
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  padding: 0 15px;
+}
+
+/*===== footer =====*/
+.footer {
+  background-color: var(--principal);
+}
+
+.copyright-text{
+  padding: 10px 0;
+  font-size: 18px;
+  color: var(--preto);
+  font-weight: 300;
+  margin: 8px 0 0;
+}
