@@ -48,3 +48,24 @@ for (let i = 0; i < filterBtns.length; i++) {
     }
   });
 }
+
+// Definir as cores principal do css
+const colors = ['#00a78e', '#3357ff', '#CFD11A', '#000'];
+let currentIndex = 0;
+
+function changeBackgroundColor() {
+  const isBlack = colors[currentIndex] === '#000';
+  document.documentElement.style.setProperty(
+    '--principal',
+    colors[currentIndex],
+  );
+  document.documentElement.style.setProperty(
+    '--text-color',
+    isBlack ? '#fff' : colors[currentIndex],
+  );
+
+  currentIndex = (currentIndex + 1) % colors.length;
+}
+
+changeBackgroundColor();
+setInterval(changeBackgroundColor, 10000);

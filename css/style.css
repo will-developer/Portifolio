@@ -1,4 +1,7 @@
 /*  ========== Fontes das Letras ========= */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap');
 /*  ========== CSS Global ========= */
 :root
 {
@@ -10,8 +13,8 @@
   --branco: #fff;
   --preto-alfa: 0 4px 8px rgba(0, 0, 0, 0.5);
   /* peso da fonte */
-  --weight-700-title: /*a definir*/;
-  --weight-600: /*a definir*/;
+  --weight-700-title: 700;
+  --weight-600: 600;
 }
 
 * {
@@ -26,7 +29,7 @@ html {
 }
 
 body{
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   background-color: (var(--branco));
 }
@@ -93,7 +96,8 @@ img{
 }
 
 .sub-title{
-  font-size: 20px;
+  font-family: "Zain", sans-serif;
+  font-size: 30px;
   font-weight: var(--weight-600) /* A definir */;
   color: var(--principal);
 }
@@ -117,9 +121,13 @@ img{
   background-color: var(--branco);
   box-shadow: var(--sombra-preta);
 }
+.logo {
+  align-self: center;
+  font-family: "Playwrite AU SA", cursive;
+}
 
 .logo a{
-  font-size: 24px;
+  font-size: 26px;
   color: var(--preto);
   text-transform: capitalize;
 }
@@ -135,8 +143,9 @@ img{
 }
 
 .nav-link{
+  font-family: "Zain", sans-serif;
   color: var(--branco);
-  font-size: 16px;
+  font-size: 23px;
   padding: 10px 0;
   display: block;
   text-transform: capitalize;
@@ -187,10 +196,12 @@ img{
 }
 
 .home-text h4{
-  font-size: 30px;
-  letter-spacing: 4px;
+  font-family: "Zain", sans-serif;
+  font-size: 32px;
+  letter-spacing: 2px;
   font-weight: var(--weight-600);
   color: var(--principal);
+  margin-bottom: -10px;
 }
 
 .home-text h1{
@@ -258,10 +269,8 @@ img{
   position: relative;
 }
 
-.img-box img {
-  max-width: 100%;
-  width: 100%;
-  z-index: 100;
+dotlottie-player{
+  margin-left: -160px;
 }
 
 .img-box .about-shape {
@@ -311,13 +320,14 @@ img{
 }
 
 .hardskill-item img {
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
 }
 
 .hardskill-item h3 {
-  font-size: 18px;
+  font-size: 20px;
   margin-top: 10px;
+  font-family: "Zain", sans-serif;
 }
 
 /* ========== habilidades ========= */
@@ -463,10 +473,23 @@ font-size: 24px;
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
-  box-shadow: (var(--sombra-preta));
+  box-shadow: var(--sombra-preta);
   cursor: pointer;
   position: relative;
 }
+
+/* provisodio, depois retirar futuramente */
+
+.production{
+  cursor: not-allowed;
+}
+
+.red {
+  color: red !important;
+  border: 1px solid;
+}
+
+/* fim do provisório */
 
 .portfolio-img img {
   width: 100%;
@@ -493,7 +516,7 @@ font-size: 24px;
 .portfolio-info h4{
   font-size: 18px;
   font-weight: 700;
-  color: var(--principal);
+  color: var(--text-color);
   text-transform: uppercase;
   transform: translateX(-20px);
   transition: all 0.3s ease;
@@ -551,6 +574,10 @@ font-size: 24px;
   width: 100%;
 }
 
+.contact-item-inner:hover{
+  background-color: #f3f3f3;
+}
+
 .contact-item-inner i{
   font-size: 25px;
   color: var(--principal);
@@ -592,6 +619,7 @@ font-size: 24px;
 }
 
 .input-control {
+  font-family: "Zain", sans-serif;
   height: 45px;
   display: block;
   width: 100%;
@@ -599,7 +627,7 @@ font-size: 24px;
   border: none;
   outline: none;
   background-color: transparent;
-  font-size: 16px;
+  font-size: 18px;
   padding: 0 15px;
   color: var(--preto-cinza);
   transition: all 0.3 ease;
@@ -624,9 +652,10 @@ font-size: 24px;
 }
 
 .copyright-text{
+  font-family: "Zain", sans-serif;
   padding: 10px 0;
-  font-size: 18px;
-  color: var(--preto);
+  font-size: 24px;
+  color: var(--branco);
   font-weight: 300;
   margin: 8px 0 0;
 }
@@ -725,4 +754,8 @@ font-size: 24px;
     flex: 0 0 50%;
     max-width: 50%;
   }
+}
+
+.test {
+  outline: 1px solid black;
 }
