@@ -64,7 +64,7 @@ function changeBackgroundColor() {
     isBlack ? '#fff' : colors[currentIndex],
   );
 
-  currentIndex = (currentIndex + 1) % colors.length;
+  currentIndex = (currentIndex + 1) % colors.length; //voltar indice a 0 quando chegar em 4
 }
 
 changeBackgroundColor();
