@@ -754,8 +754,8 @@ font-size: 24px;
     flex: 0 0 50%;
     max-width: 50%;
   }
-}
 
-.test {
-  outline: 1px solid black;
+  .copyright-text {
+    font-size: 22px;
+  }
 }
