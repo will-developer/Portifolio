@@ -311,12 +311,11 @@ dotlottie-player{
 }
 
 .hardskill-item{
-  flex: 0 0 30%;
   max-width: 30%;
   margin-top: 30px;
   margin-bottom: -30px;
   text-align: center;
-  padding: 20px;
+  padding: 23px;
 }
 
 .hardskill-item img {
@@ -443,11 +442,32 @@ font-size: 24px;
 
 .portfolio-item{
   flex: 0 0 33.33%;
-  max-width: 33.33%;
+  max-width: 33.3%;
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
+
+.portfolio-item:nth-child(2) .portfolio-img::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 3px solid var(--principal);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+.portfolio-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 
 .portfolio-item.hide{
   display: none;
@@ -493,7 +513,10 @@ font-size: 24px;
 
 .portfolio-img img {
   width: 100%;
+  max-width: 100%;
   display: block;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .portfolio-item .portfolio-info {
